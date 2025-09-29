@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Knowledge Graph Agnostic Node: A Python library for retrieving knowledge from any Knowledge Graph using a seed node.">
+    <title>Knowledge Graph Agnostic Node</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+            color: #333;
+        }
+        header {
+            background-color: #319ae2;
+            color: white;
+            padding: 1rem 2rem;
+            text-align: center;
+        }
+        main {
+            padding: 2rem;
+            max-width: 900px;
+            margin: auto;
+            background-color: white;
+            margin-top: 2rem;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0,0,0,0.1);
+        }
+        code {
+            background-color: #eee;
+            padding: 2px 5px;
+            border-radius: 4px;
+        }
+        pre {
+            background-color: #eee;
+            padding: 1rem;
+            border-radius: 6px;
+            overflow-x: auto;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Knowledge Graph Agnostic Node</h1>
+        <p>Knowledge-Aware LLM Applications</p>
+    </header>
+    <main>
+        <h2>Overview</h2>
+        <p>
+            <strong>Knowledge Graph Agnostic Node</strong> is a Python library that allows you to retrieve knowledge from any knowledge graph (KG). Simply provide a seed node, and the library traverses the graph to extract relevant information for your LLM applications.
+        </p>
+
+        <h2>Installation</h2>
+        <pre><code>pip install kg-agnostic-node</code></pre>
+
+        <h2>Usage Example</h2>
+        <pre><code>
+from kg_agnostic_node import KGNode
+
+# Initialize with seed node
+node = KGNode(seed="Cancer")
+
+# Traverse the knowledge graph
+results = node.traverse(depth=3)
+
+print(results)
+        </code></pre>
+
+        <h2>Features</h2>
+        <ul>
+            <li>Works with any knowledge graph</li>
+            <li>Simple seed node input</li>
+            <li>Configurable traversal depth</li>
+            <li>Knowledge retrieval optimized for LLMs</li>
+        </ul>
+
+        <h2>Documentation</h2>
+        <p>For more details, visit the <a href="#">official documentation</a>.</p>
+    </main>
+</body>
+</html>
