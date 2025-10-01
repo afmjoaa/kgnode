@@ -1,0 +1,70 @@
+[project]
+name = "kgnode"
+version = "0.1.0"
+description = "Add your description here"
+readme = "README.md"
+license = { text = "MIT" }
+authors = [
+    { name = "afmjoaa", email = "32086430+afmjoaa@users.noreply.github.com" }
+]
+requires-python = ">=3.11"
+dependencies = [
+    "numpy>=2.3.3",
+]
+[dependency-groups]
+dev = [
+    "ruff<1.0.0,>=0.4.10",
+    "mypy<2.0.0,>=1.10.1",
+    "pytest>=8.2.2,<9.0.0",
+    "pytest-mock>=3.15.1",
+]
+
+[tool.ruff]
+lint.select = [
+    "E",    # pycodestyle
+    "F",    # pyflakes
+    "I",    # isort
+    "D",    # pydocstyle
+    "D401", # First line should be in imperative mood
+]
+
+[tool.ruff.lint.per-file-ignores]
+"tests/*" = ["D"]
+
+[tool.ruff.lint.pydocstyle]
+convention = "google"
+
+[tool.ruff.format]
+docstring-code-format = true
+docstring-code-line-length = 80
+
+[tool.uv.sources]
+kgnode = { workspace = true }
+
+#[tool.pytest-watcher]
+#now = true
+#delay = 3
+#patterns = ["*.py"]
+
+# To change the root module location, only src is included by default.
+#[tool.uv.build-backend]
+#module-name = "kgnode"
+#module-root = ""
+
+[tool.uv.build-backend]
+source-exclude = [
+    "tests/",
+    "docs/",
+    ".github/",
+    "_data/",
+    "_temp/",
+    ".python-version",
+    ".venv*/**",
+    ".editorconfig",
+    ".langgraph_api",
+    "*.ipynb",
+]
+
+[build-system]
+requires = ["uv_build>=0.8.16,<0.9.0"]
+build-backend = "uv_build"

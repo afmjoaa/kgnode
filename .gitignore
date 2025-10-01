@@ -1,7 +1,8 @@
 ### JetBrains template
 .idea/
 .DS_Store
-
+_temp/
+_data/
 ### JupyterNotebooks template
 # gitignore template for Jupyter Notebooks
 # website: http://jupyter.org/
