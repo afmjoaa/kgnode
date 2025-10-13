@@ -1,1 +1,1 @@
-print("kgnode workspace version loaded")
+# print("kgnode workspace version loaded")
